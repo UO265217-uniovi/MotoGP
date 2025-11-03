@@ -1,0 +1,49 @@
+/*
+    Nombre: Iván Roque Álvarez Lamas
+    UO: UO265217
+*/
+
+/*Estilos generales del proyecto MotoGP-Desktop*/
+
+/* ESPECIFICIDAD 001 */
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* ESPECIFICIDAD 001 */
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Media queries */
+@media (min-width: 320px) and (max-width: 799px) {
+  /* ESPECIFICIDAD 001 */
+  header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* ESPECIFICIDAD 001 */
+  nav {
+    flex-direction: column;
+  }
+
+  body > p {
+    display: none;
+  }
+
+  /* Especificidad: 001 */
+  video {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Especificidad: 001 */
+  /* Adaptabilidad de audio en móviles */
+  audio {
+    width: 100%;
+  }
+}
