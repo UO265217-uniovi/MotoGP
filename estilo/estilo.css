@@ -21,7 +21,7 @@ header {
 
 /* ESPECIFICIDAD 002 */
 header a {
-  color: #fff5f5; /* WARNING: Hereda color de fondo de header */
+  color: #f5f5f5; /* WARNING: Hereda color de fondo de header */
   text-decoration: none;
 }
 
@@ -31,7 +31,6 @@ header a:hover {
 
 /* ESPECIFICIDAD 012 */
 header a.active {
-  color: #f5f5f5; /* WARNING: Hereda color de fondo de header */
   font-weight: bold;
   text-decoration: underline;
 }
