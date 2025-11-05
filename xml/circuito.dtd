@@ -1,0 +1,73 @@
+<!ELEMENT circuito (
+                    nombre,
+                    longitud, 
+                    anchura_media,
+                    fecha,
+                    hora_inicio,
+                    vueltas,
+                    localidad,
+                    pais,
+                    patrocinador,
+                    referencias,
+                    galeria_fotos,
+                    galeria_videos,
+                    origen,
+                    tramos,
+                    vencedor,
+                    clasificados
+                    )>
+
+<!ELEMENT longitud (#PCDATA)>
+<!ATTLIST longitud unidad CDATA #REQUIRED>
+
+<!ELEMENT anchura_media (#PCDATA)>
+<!ATTLIST anchura_media unidad CDATA #REQUIRED>
+
+<!ELEMENT fecha (#PCDATA)>
+
+<!ELEMENT hora_inicio (#PCDATA)>
+
+<!ELEMENT vueltas (#PCDATA)>
+
+<!ELEMENT localidad (#PCDATA)>
+
+<!ELEMENT pais (#PCDATA)>
+
+<!ELEMENT patrocinador (#PCDATA)>
+
+<!ELEMENT referencias (referencia+)>
+<!ELEMENT referencia (#PCDATA)>
+
+<!ELEMENT galeria_fotos (foto, foto?, foto?, foto?, foto?)>
+<!ELEMENT foto EMPTY>
+<!ATTLIST foto url CDATA #REQUIRED>
+
+<!ELEMENT galeria_videos (video, video?, video?)>
+<!ELEMENT video EMPTY>
+<!ATTLIST video url CDATA #REQUIRED>
+
+<!ELEMENT origen (coordenadas)>
+
+<!ELEMENT tramos (tramo+)>
+<!ELEMENT tramo (distancia, coordenadas)>
+
+<!ATTLIST tramo sector CDATA #REQUIRED>
+<!ELEMENT distancia (#PCDATA)>
+
+<!ATTLIST distancia unidad CDATA #REQUIRED>
+
+<!ELEMENT coordenadas (lon, lat, alt)>
+<!ELEMENT lon (#PCDATA)>
+<!ELEMENT lat (#PCDATA)>
+<!ELEMENT alt (#PCDATA)>
+
+<!ELEMENT vencedor (nombre, tiempo_carrera)>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT tiempo_carrera (#PCDATA)>
+
+<!ELEMENT clasificados (clasificacion_participante, clasificacion_participante, clasificacion_participante)>
+
+<!ELEMENT clasificacion_participante (nombre, puntos)>
+
+<!ELEMENT puntos (#PCDATA)>

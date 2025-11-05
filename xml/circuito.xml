@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE circuito SYSTEM "circuito.dtd">
+<circuito>
+    <nombre>MotorLand Aragon</nombre>
+    <longitud unidad="m">5345</longitud>
+    <anchura_media unidad="m">14</anchura_media>
+    <fecha>8-6-2025</fecha>
+    <hora_inicio>14:00</hora_inicio>
+    <vueltas>23</vueltas>
+    <localidad>Alcañiz</localidad>
+    <pais>España</pais>
+    <patrocinador>Movistar</patrocinador>
+    <referencias>
+        <referencia>https://es.wikipedia.org/wiki/MotorLand_Arag%C3%B3n</referencia>
+        <referencia>https://www.motorlandaragon.com/es</referencia>
+        <referencia>
+            https://www.motogp.com/es/calendar/2025/event/spain/4e4f2356-d5de-43c8-ac94-39af7e7077f9?tab=overview</referencia>
+    </referencias>
+    <galeria_fotos>
+        <foto url="../multimedia/motogp_motorland.jpg" />
+        <foto url="../multimedia/motorland-trazado.webp" />
+    </galeria_fotos>
+    <galeria_videos>
+        <video url="../multimedia/resumen-gp-2025.mp4" />
+    </galeria_videos>
+    <origen>
+        <coordenadas>
+            <lon>-0.197821</lon>
+            <lat>41.078280</lat>
+            <alt>369</alt>
+        </coordenadas>
+    </origen>
+    <tramos>
+        <tramo sector="1">
+            <distancia unidad="m">264</distancia>
+            <coordenadas>
+                <lon>-0.200279</lon>
+                <lat>41.079760</lat>
+                <alt>371</alt>
+            </coordenadas>
+        </tramo>
+        <tramo sector="1">
+            <distancia unidad="m">170</distancia>
+            <coordenadas>
+                <lon>-0.201718</lon>
+                <lat>41.078689</lat>
+                <alt>372</alt>
+            </coordenadas>
+        </tramo>
+        <tramo sector="1">
+            <distancia unidad="m">76</distancia>
+            <coordenadas>
+                <lon>-0.202627</lon>
+                <lat>41.078620</lat>
+                <alt>375</alt>
+            </coordenadas>
+        </tramo>
+        <tramo sector="1">
+            <distancia unidad="m">199</distancia>
+            <coordenadas>
+                <lon>-0.204816</lon>
+                <lat>41.079299</lat>
+                <alt>383</alt>
+            </coordenadas>
+        </tramo>
+        <tramo sector="1">
+            <distancia unidad="m">285</distancia>
+            <coordenadas>
+                <lon>-0.205508</lon>
+                <lat>41.081801</lat>
+                <alt>396</alt>
+            </coordenadas>
+        </tramo>
+        <tramo sector="1">
+            <distancia unidad="m">86</distancia>
+            <coordenadas>
+                <lon>-0.206193</lon>
+                <lat>41.082326</lat>
+                <alt>398</alt>
+            </coordenadas>
+        </tramo>
+        <tramo sector="1">
+            <distancia unidad="m">70</distancia>
+            <coordenadas>
+                <lon>-0.207044</lon>
+                <lat>41.082561</lat>
+                <alt>400</alt>
+            </coordenadas>
+        </tramo>
+        <tramo sector="1">
+            <distancia unidad="m">210</distancia>
+            <coordenadas>
+                <lon>-0.207932</lon>
+                <lat>41.080845</lat>
+                <alt>402</alt>
+            </coordenadas>
+        </tramo>
+        <tramo sector="1">
+            <distancia unidad="m">160</distancia>
+            <coordenadas>
+                <lon>-0.209514</lon>
+                <lat>41.079975</lat>
+                <alt>403</alt>
+            </coordenadas>
+        </tramo>
+        <tramo sector="1">
+            <distancia unidad="m">60</distancia>
+            <coordenadas>
+                <lon>-0.210141</lon>
+                <lat>41.080132</lat>
+                <alt>403</alt>
+            </coordenadas>
+        </tramo>
+        <tramo sector="2">
+            <distancia unidad="m">330</distancia>
+            <coordenadas>
+                <lon>-0.210714</lon>
+                <lat>41.083133</lat>
+                <alt>399</alt>
+            </coordenadas>
+        </tramo>
+        <tramo sector="2">
+            <distancia unidad="m">100</distancia>
+            <coordenadas>
+                <lon>-0.209749</lon>
+                <lat>41.083582</lat>
+                <alt>394</alt>
+            </coordenadas>
+        </tramo>
+        <tramo sector="2">
+            <distancia unidad="m">100</distancia>
+            <coordenadas>
+                <lon>-0.210647</lon>
+                <lat>41.084168</lat>
+                <alt>388</alt>
+            </coordenadas>
+        </tramo>
+        <tramo sector="2">
+            <distancia unidad="m">110</distancia>
+            <coordenadas>
+                <lon>-0.211943</lon>
+                <lat>41.084220</lat>
+                <alt>385</alt>
+            </coordenadas>
+        </tramo>
+        <tramo sector="2">
+            <distancia unidad="m">100</distancia>
+            <coordenadas>
+                <lon>-0.212853</lon>
+                <lat>41.083649</lat>
+                <alt>385</alt>
+            </coordenadas>
+        </tramo>
+        <tramo sector="2">
+            <distancia unidad="m">190</distancia>
+            <coordenadas>
+                <lon>-0.212755</lon>
+                <lat>41.081965</lat>
+                <alt>389</alt>
+            </coordenadas>
+        </tramo>
+        <tramo sector="2">
+            <distancia unidad="m">240</distancia>
+            <coordenadas>
+                <lon>-0.211780</lon>
+                <lat>41.079874</lat>
+                <alt>393</alt>
+            </coordenadas>
+        </tramo>
+        <tramo sector="2">
+            <distancia unidad="m">160</distancia>
+            <coordenadas>
+                <lon>-0.210496</lon>
+                <lat>41.078841</lat>
+                <alt>391</alt>
+            </coordenadas>
+        </tramo>
+        <tramo sector="2">
+            <distancia unidad="m">150</distancia>
+            <coordenadas>
+                <lon>-0.208848</lon>
+                <lat>41.079467</lat>
+                <alt>390</alt>
+            </coordenadas>
+        </tramo>
+        <tramo sector="2">
+            <distancia unidad="m">130</distancia>
+            <coordenadas>
+                <lon>-0.207465</lon>
+                <lat>41.078960</lat>
+                <alt>387</alt>
+            </coordenadas>
+        </tramo>
+        <tramo sector="2">
+            <distancia unidad="m">130</distancia>
+            <coordenadas>
+                <lon>-0.206413</lon>
+                <lat>41.078155</lat>
+                <alt>381</alt>
+            </coordenadas>
+        </tramo>
+        <tramo sector="2">
+            <distancia unidad="m">90</distancia>
+            <coordenadas>
+                <lon>-0.206875</lon>
+                <lat>41.077387</lat>
+                <alt>378</alt>
+            </coordenadas>
+        </tramo>
+        <tramo sector="3">
+            <distancia unidad="m">1040</distancia>
+            <coordenadas>
+                <lon>-0.195284</lon>
+                <lat>41.074286</lat>
+                <alt>357</alt>
+            </coordenadas>
+        </tramo>
+        <tramo sector="3">
+            <distancia unidad="m">90</distancia>
+            <coordenadas>
+                <lon>-0.194248</lon>
+                <lat>41.074643</lat>
+                <alt>359</alt>
+            </coordenadas>
+        </tramo>
+        <tramo sector="3">
+            <distancia unidad="m">110</distancia>
+            <coordenadas>
+                <lon>-0.193971</lon>
+                <lat>41.075558</lat>
+                <alt>362</alt>
+            </coordenadas>
+        </tramo>
+        <tramo sector="3">
+            <distancia unidad="m">80</distancia>
+            <coordenadas>
+                <lon>-0.194392</lon>
+                <lat>41.076247</lat>
+                <alt>365</alt>
+            </coordenadas>
+        </tramo>
+        <tramo sector="3">
+            <distancia unidad="m">360</distancia>
+            <coordenadas>
+                <lon>-0.197821</lon>
+                <lat>41.078280</lat>
+                <alt>369</alt>
+            </coordenadas>
+        </tramo>
+    </tramos>
+
+    <vencedor>
+        <nombre>Marc Márquez</nombre>
+        <tiempo_carrera>41:11.195</tiempo_carrera>
+    </vencedor>
+
+    <clasificados>
+        <clasificacion_participante>
+            <nombre>Marc Márquez</nombre>
+            <puntos>233</puntos>
+        </clasificacion_participante>
+        <clasificacion_participante>
+            <nombre>Álex Márquez</nombre>
+            <puntos>201</puntos>
+        </clasificacion_participante>
+        <clasificacion_participante>
+            <nombre>Marco Bezzecchi</nombre>
+            <puntos>140</puntos>
+        </clasificacion_participante>
+    </clasificados>
+
+</circuito>
