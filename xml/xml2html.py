@@ -1,6 +1,6 @@
 import xml.etree.ElementTree as ET
 
-class HtmlDoc:
+class Html:
     def __init__(self):
         self.parts = []
     def add(self, html):
@@ -15,7 +15,7 @@ def main():
     root = tree.getroot()
     nombre = root.find(f"{NS}nombre").text
 
-    html = HtmlDoc()
+    html = Html()
     html.add('<!DOCTYPE html>')
     html.add('<html lang="es">')
     html.add('  <head>')

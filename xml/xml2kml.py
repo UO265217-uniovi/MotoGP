@@ -10,7 +10,7 @@ SECTOR_COLORS = {
     '3': 'ffff0000',  # Azul
 }
 
-class KmlWriter:
+class Kml:
     def __init__(self):
         self.kml = ET.Element('kml', xmlns='http://www.opengis.net/kml/2.2')
         self.doc = ET.SubElement(self.kml, 'Document')
@@ -64,7 +64,7 @@ def main():
         last_sector = sector
         last_coord = coord
 
-    kml = KmlWriter()
+    kml = Kml()
     # 2. Añade cada sector
     for sector in sorted(sectores_coords.keys(), key=int):
         nombre = f"Sector {sector}"
