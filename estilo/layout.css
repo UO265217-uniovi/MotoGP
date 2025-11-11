@@ -12,6 +12,18 @@ header {
   align-items: center;
 }
 
+/* Especificidad: 001 */
+video {
+  width: 50%;
+  height: auto;
+}
+
+/* Especificidad: 001 */
+img {
+  width: 50%;
+  height: auto;
+}
+
 /* ESPECIFICIDAD 001 */
 nav {
   display: flex;
@@ -31,19 +43,24 @@ nav {
     flex-direction: column;
   }
 
+  /* ESPECIFICIDAD 002 */
   body > p {
     display: none;
   }
 
   /* Especificidad: 001 */
-  video {
+  /* Adaptabilidad de audio en móviles */
+  audio {
     width: 100%;
-    height: auto;
   }
 
   /* Especificidad: 001 */
-  /* Adaptabilidad de audio en móviles */
-  audio {
+  video {
+    width: 100%;
+  }
+
+  /* Especificidad: 001 */
+  img {
     width: 100%;
   }
 }

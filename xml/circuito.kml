@@ -1,5 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
-<kml xmlns="http://www.opengis.net/kml/2.2"><Document><Placemark><name>Sector 1</name><Style><LineStyle><color>ff0000ff</color><width>5</width></LineStyle></Style><LineString><extrude>1</extrude><tessellate>1</tessellate><altitudeMode>clampToGround</altitudeMode><coordinates>-0.197821,41.078280
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Placemark>
+      <name>Sector 1</name>
+      <LineString>
+        <extrude>1</extrude>
+        <tessellate>1</tessellate>
+        <coordinates>-0.197821,41.078280
 -0.200279,41.079760
 -0.201718,41.078689
 -0.202627,41.078620
@@ -9,7 +16,22 @@
 -0.207044,41.082561
 -0.207932,41.080845
 -0.209514,41.079975
--0.210141,41.080132</coordinates></LineString></Placemark><Placemark><name>Sector 2</name><Style><LineStyle><color>ff00ff00</color><width>5</width></LineStyle></Style><LineString><extrude>1</extrude><tessellate>1</tessellate><altitudeMode>clampToGround</altitudeMode><coordinates>-0.210141,41.080132
+-0.210141,41.080132</coordinates>
+        <altitudeMode>clampToGround</altitudeMode>
+      </LineString>
+      <Style>
+        <LineStyle>
+          <color>ff0000ff</color>
+          <width>5</width>
+        </LineStyle>
+      </Style>
+    </Placemark>
+    <Placemark>
+      <name>Sector 2</name>
+      <LineString>
+        <extrude>1</extrude>
+        <tessellate>1</tessellate>
+        <coordinates>-0.210141,41.080132
 -0.210714,41.083133
 -0.209749,41.083582
 -0.210647,41.084168
@@ -21,9 +43,35 @@
 -0.208848,41.079467
 -0.207465,41.078960
 -0.206413,41.078155
--0.206875,41.077387</coordinates></LineString></Placemark><Placemark><name>Sector 3</name><Style><LineStyle><color>ffff0000</color><width>5</width></LineStyle></Style><LineString><extrude>1</extrude><tessellate>1</tessellate><altitudeMode>clampToGround</altitudeMode><coordinates>-0.206875,41.077387
+-0.206875,41.077387</coordinates>
+        <altitudeMode>clampToGround</altitudeMode>
+      </LineString>
+      <Style>
+        <LineStyle>
+          <color>ff00ff00</color>
+          <width>5</width>
+        </LineStyle>
+      </Style>
+    </Placemark>
+    <Placemark>
+      <name>Sector 3</name>
+      <LineString>
+        <extrude>1</extrude>
+        <tessellate>1</tessellate>
+        <coordinates>-0.206875,41.077387
 -0.195284,41.074286
 -0.194248,41.074643
 -0.193971,41.075558
 -0.194392,41.076247
--0.197821,41.078280</coordinates></LineString></Placemark></Document></kml>
+-0.197821,41.078280</coordinates>
+        <altitudeMode>clampToGround</altitudeMode>
+      </LineString>
+      <Style>
+        <LineStyle>
+          <color>ffff0000</color>
+          <width>5</width>
+        </LineStyle>
+      </Style>
+    </Placemark>
+  </Document>
+</kml>
