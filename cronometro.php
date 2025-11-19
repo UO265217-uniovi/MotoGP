@@ -72,8 +72,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MotoGP Desktop - Cronómetro</title>
-    <link rel="stylesheet" type="text/css" href="estilo.css" />
-    <link rel="stylesheet" type="text/css" href="layout.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
 </head>
 <body>
     <header>
@@ -89,8 +89,14 @@
         </nav>
     </header>
     
-    <p>Estás en: <a href="index.html">Inicio</a> >> <a href="juegos.html">Juegos</a> >> Cronómetro</p>
-
+    <p>
+      <a href="index.html" title="Volver a la página de inicio">Inicio</a>
+      >
+      <a href="juegos.html" title="Volver a la página de juegos">Juegos</a>
+      >
+      <strong>Cronómetro PHP</strong>
+    </p>
+    
     <main>
         <section>
             <h2>Cronómetro PHP</h2>
@@ -115,9 +121,5 @@
             </article>
         </section>
     </main>
-    
-    <footer>
-        <p>MotoGP Desktop - Práctica PHP</p>
-    </footer>
 </body>
 </html>
