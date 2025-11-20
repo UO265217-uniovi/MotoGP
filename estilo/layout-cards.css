@@ -12,12 +12,18 @@ main h2 {
   text-align: center;
 }
 
+main p {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
 /* Especificidad: 002 */
 main article {
   width: 100%;
 }
 
 @media (max-width: 800px) {
+  /* Especificidad: 001 */
   main {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(6, auto);

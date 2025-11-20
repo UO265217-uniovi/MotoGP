@@ -3,10 +3,27 @@ class Memoria {
     this.tablero_bloqueado = true;
     this.primera_carta = null;
     this.segunda_carta = null;
+
+    this.cronometro = new Cronometro();
+
+    this.barajarCartas();
+    this.reiniciarAtributos();
+
+    this.cronometro.arrancar();
   }
 
   voltearCarta(carta) {
+    if (this.tablero_bloqueado) return;
+
+    if (carta === this.primera_carta) return;
+
     carta.setAttribute("data-estado", "volteada");
+
+    if (this.primera_carta === null) this.primera_carta = carta;
+    else {
+      this.segunda_carta = carta;
+      this.comprobarPareja();
+    }
   }
 
   barajarCartas() {
@@ -50,7 +67,27 @@ class Memoria {
     const totalCartas = document.querySelectorAll("main article");
 
     if (cartasReveladas.length === totalCartas.length) {
-      alert("HAS GANADO!");
+      this.cronometro.parar();
     }
+  }
+
+  cubrirCartas() {
+    this.tablero_bloqueado = true;
+
+    setTimeout(() => {
+      if (this.primera_carta && this.segunda_carta) {
+        this.primera_carta.removeAttribute("data-estado");
+        this.segunda_carta.removeAttribute("data-estado");
+      }
+
+      this.reiniciarAtributos();
+    }, 1000);
+  }
+
+  comprobarPareja() {
+    const primera = this.primera_carta.querySelector("img").src;
+    const segunda = this.segunda_carta.querySelector("img").src;
+
+    primera === segunda ? this.deshabilitarCartas() : this.cubrirCartas();
   }
 }
