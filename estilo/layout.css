@@ -36,7 +36,7 @@ nav {
   header {
     flex-direction: column;
     gap: 1rem;
-    padding-bottom: 1cqmax;
+    padding-bottom: 1rem;
   }
 
   /* ESPECIFICIDAD 001 */
@@ -50,19 +50,18 @@ nav {
   }
 
   /* ESPECIFICIDAD: 001 */
-  /* Adaptabilidad de audio en móviles */
   audio {
     width: 100%;
   }
 
   /* ESPECIFICIDAD: 001 */
   video {
-    width: 100%;
+    width: 100%; /* WARNING: Redefinición de width para adaptabilidad móvil */
   }
 
   /* ESPECIFICIDAD: 001 */
   img {
-    width: 100%;
+    width: 100%; /* WARNING: Redefinición de width para adaptabilidad móvil */
   }
 
   /* ESPECIFICIDAD: 003 */
