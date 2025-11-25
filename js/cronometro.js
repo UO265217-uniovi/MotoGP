@@ -57,3 +57,27 @@ class Cronometro {
     this.mostrar();
   }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (document.querySelector("main button")) {
+    const cronometro = new Cronometro();
+
+    cronometro.mostrar();
+
+    const botones = document.querySelectorAll("main button");
+
+    const botonArrancar = botones[0];
+    const botonParar = botones[1];
+    const botonReiniciar = botones[2];
+
+    botonArrancar.addEventListener("click", function () {
+      cronometro.arrancar();
+    });
+    botonParar.addEventListener("click", function () {
+      cronometro.parar();
+    });
+    botonReiniciar.addEventListener("click", function () {
+      cronometro.reiniciar();
+    });
+  }
+});

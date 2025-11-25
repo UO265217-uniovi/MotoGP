@@ -96,3 +96,15 @@ class Memoria {
     primera === segunda ? this.deshabilitarCartas() : this.cubrirCartas();
   }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const memoria = new Memoria();
+
+  const cartas = document.querySelectorAll("main article");
+
+  cartas.forEach((carta) => {
+    carta.addEventListener("click", function () {
+      memoria.voltearCarta(carta);
+    });
+  });
+});

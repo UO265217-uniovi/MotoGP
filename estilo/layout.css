@@ -49,19 +49,27 @@ nav {
     display: none;
   }
 
-  /* Especificidad: 001 */
+  /* ESPECIFICIDAD: 001 */
   /* Adaptabilidad de audio en móviles */
   audio {
     width: 100%;
   }
 
-  /* Especificidad: 001 */
+  /* ESPECIFICIDAD: 001 */
   video {
     width: 100%;
   }
 
-  /* Especificidad: 001 */
+  /* ESPECIFICIDAD: 001 */
   img {
     width: 100%;
+  }
+
+  /* ESPECIFICIDAD: 003 */
+  article h2 + img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 640px;
   }
 }
