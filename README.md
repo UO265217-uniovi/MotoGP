@@ -2,10 +2,6 @@
 
     - URLGITHUB: https://uo265217-uniovi.github.io/MotoGP/
 
-Aquí tienes la lista de herramientas y normas de validación formateada en Markdown (.md), lista para copiar y guardar en tu documentación del proyecto.
-
-Markdown
-
 # Lista de Herramientas de Validación - Proyecto MotoGP Desktop
 
 Esta lista recoge los validadores oficiales y las herramientas necesarias para cumplir con las Pautas de Trabajo (P0) de la asignatura "Software y estándares para la Web".
