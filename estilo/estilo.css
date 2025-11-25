@@ -37,12 +37,12 @@ header a.active {
 
 /* ESPECIFICIDAD 001 */
 h1 {
-  color: #f5f5f5; /* WARNING: Hereda color de fondo de body */
+  color: #f5f5f5; /* WARNING: Hereda color de fondo de header */
 }
 
 /* ESPECIFICIDAD 001 */
 nav {
-  color: #ffd700; /* WARNING: Hereda color de fondo de body */
+  color: #ffd700; /* WARNING: Hereda color de fondo de header */
 }
 
 /* Selector migas */
