@@ -1,40 +1,52 @@
 // La ciudad es: Alcañiz
 
 class Ciudad {
-    constructor(nombre, pais, gentilicio) {
-        this.nombre = nombre;
-        this.pais = pais;
-        this.gentilicio = gentilicio;
-        this.poblacion = null;
-        this.coordenadas = null;
-    }
+  #nombre;
+  #pais;
+  #gentilicio;
+  #poblacion;
+  #coordenadas;
 
-    setPoblacion(poblacion) {
-        this.poblacion = poblacion;
-    }
+  constructor(nombre, pais, gentilicio) {
+    this.#nombre = nombre;
+    this.#pais = pais;
+    this.#gentilicio = gentilicio;
+    this.#poblacion = null;
+    this.#coordenadas = null;
+  }
 
-    setCoordenadas(coordenadas) {
-        this.coordenadas = coordenadas;
-    }
+  setPoblacion(poblacion) {
+    this.#poblacion = poblacion;
+  }
 
-    getNombre() {
-        return this.nombre;
-    }
+  setCoordenadas(coordenadas) {
+    this.#coordenadas = coordenadas;
+  }
 
-    getPais() {
-        return this.pais;
-    }
+  getNombre() {
+    return this.#nombre;
+  }
 
-    getInformacionSecundaria() {
-        return (
-        `<ul>
-            <li>${this.gentilicio}</li>
-            <li>${this.poblacion}</li>
-        </ul>`
-        );
-    }
+  getPais() {
+    return this.#pais;
+  }
 
-    escribirCoordenadas() {
-    document.write(`<p>Coordenadas: ${this.coordenadas}</p>`);
+  getInformacionSecundaria() {
+    return `<ul>
+            <li>${this.#gentilicio}</li>
+            <li>${this.#poblacion}</li>
+        </ul>`;
+  }
+
+  escribirCoordenadas() {
+    let parrafo = document.createElement("p");
+
+    parrafo.textContent = `Coordenadas: ${this.#coordenadas}`;
+
+    let sectionInformacionSecundaria = document.querySelector(
+      "main section section"
+    );
+
+    sectionInformacionSecundaria.appendChild(parrafo);
   }
 }

@@ -1,27 +1,32 @@
 class Memoria {
-  constructor() {
-    this.tablero_bloqueado = true;
-    this.primera_carta = null;
-    this.segunda_carta = null;
+  #tablero_bloqueado;
+  #primera_carta;
+  #segunda_carta;
+  #cronometro;
 
-    this.cronometro = new Cronometro();
+  constructor() {
+    this.#tablero_bloqueado = true;
+    this.#primera_carta = null;
+    this.#segunda_carta = null;
+
+    this.#cronometro = new Cronometro();
 
     this.barajarCartas();
     this.reiniciarAtributos();
 
-    this.cronometro.arrancar();
+    this.#cronometro.arrancar();
   }
 
   voltearCarta(carta) {
-    if (this.tablero_bloqueado) return;
+    if (this.#tablero_bloqueado) return;
 
-    if (carta === this.primera_carta) return;
+    if (carta === this.#primera_carta) return;
 
     carta.setAttribute("data-estado", "volteada");
 
-    if (this.primera_carta === null) this.primera_carta = carta;
+    if (this.#primera_carta === null) this.#primera_carta = carta;
     else {
-      this.segunda_carta = carta;
+      this.#segunda_carta = carta;
       this.comprobarPareja();
     }
   }
@@ -45,15 +50,15 @@ class Memoria {
   }
 
   reiniciarAtributos() {
-    this.tablero_bloqueado = false;
+    this.#tablero_bloqueado = false;
 
-    this.primera_carta = null;
-    this.segunda_carta = null;
+    this.#primera_carta = null;
+    this.#segunda_carta = null;
   }
 
   deshabilitarCartas() {
-    this.primera_carta.setAttribute("data-estado", "revelada");
-    this.segunda_carta.setAttribute("data-estado", "revelada");
+    this.#primera_carta.setAttribute("data-estado", "revelada");
+    this.#segunda_carta.setAttribute("data-estado", "revelada");
 
     this.comprobarJuego();
     this.reiniciarAtributos();
@@ -67,17 +72,17 @@ class Memoria {
     const totalCartas = document.querySelectorAll("main article");
 
     if (cartasReveladas.length === totalCartas.length) {
-      this.cronometro.parar();
+      this.#cronometro.parar();
     }
   }
 
   cubrirCartas() {
-    this.tablero_bloqueado = true;
+    this.#tablero_bloqueado = true;
 
     setTimeout(() => {
-      if (this.primera_carta && this.segunda_carta) {
-        this.primera_carta.removeAttribute("data-estado");
-        this.segunda_carta.removeAttribute("data-estado");
+      if (this.#primera_carta && this.#segunda_carta) {
+        this.#primera_carta.removeAttribute("data-estado");
+        this.#segunda_carta.removeAttribute("data-estado");
       }
 
       this.reiniciarAtributos();
@@ -85,8 +90,8 @@ class Memoria {
   }
 
   comprobarPareja() {
-    const primera = this.primera_carta.querySelector("img").src;
-    const segunda = this.segunda_carta.querySelector("img").src;
+    const primera = this.#primera_carta.querySelector("img").src;
+    const segunda = this.#segunda_carta.querySelector("img").src;
 
     primera === segunda ? this.deshabilitarCartas() : this.cubrirCartas();
   }
