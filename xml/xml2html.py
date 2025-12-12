@@ -77,7 +77,7 @@ def main():
     html.agregar('        <a href="../piloto.html" title="Información del piloto">Piloto</a>')
     html.agregar('        <a class="active" href="circuito.html" title="Circuito del mundial">Circuito</a>')
     html.agregar('        <a href="../meteorologia.html" title="Datos meteorologicos">Meteorología</a>')
-    html.agregar('        <a href="../clasificaciones.html" title="Resultados y posiciones">Clasificaciones</a>')
+    html.agregar('        <a href="../clasificaciones.php" title="Resultados y posiciones">Clasificaciones</a>')
     html.agregar('        <a href="../juegos.html" title="Juegos y actividades">Juegos</a>')
     html.agregar('        <a href="../ayuda.html" title="Ayuda del proyecto">Ayuda</a>')
     html.agregar('      </nav>')

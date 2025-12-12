@@ -83,7 +83,7 @@
             <a href="piloto.html">Piloto</a>
             <a href="circuito.html">Circuito</a>
             <a href="meteorologia.html">Meteorología</a>
-            <a href="clasificaciones.html">Clasificaciones</a>
+            <a href="clasificaciones.php">Clasificaciones</a>
             <a href="juegos.html" class="active">Juegos</a>
             <a href="cronometro.php">Cronómetro</a>
         </nav>
