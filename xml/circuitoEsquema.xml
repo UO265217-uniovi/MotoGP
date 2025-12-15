@@ -19,11 +19,11 @@
             https://www.motogp.com/es/calendar/2025/event/spain/4e4f2356-d5de-43c8-ac94-39af7e7077f9?tab=overview</referencia>
     </referencias>
     <galeria_fotos>
-        <foto url="../multimedia/motogp-motorland.jpg" />
-        <foto url="../multimedia/motorland-trazado.jpg" />
+        <foto url="./multimedia/motogp-motorland.jpg" />
+        <foto url="./multimedia/motorland-trazado.jpg" />
     </galeria_fotos>
     <galeria_videos>
-        <video url="../multimedia/resumen-gp-2025.mp4" />
+        <video url="./multimedia/resumen-gp-2025.mp4" />
     </galeria_videos>
     <origen>
         <coordenadas>
