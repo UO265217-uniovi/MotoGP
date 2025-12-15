@@ -2,7 +2,7 @@
 """
 Genera archivo HTML a partir de XML usando XPath
 @version 1.0
-@author: [Tu nombre]
+@author: Iván Roque
 """
 
 import xml.etree.ElementTree as ET
