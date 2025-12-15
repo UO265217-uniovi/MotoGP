@@ -31,6 +31,7 @@ nav {
 }
 
 /* ESPECIFICIDAD 002 */
+/* Se usa div para el mapa dinámico */
 main > div {
   width: 100%;
   height: 45vh;

@@ -171,6 +171,7 @@ class CargadorKML {
     let contenedorMapa = document.querySelector("main > div");
 
     if (!contenedorMapa) {
+      // Se usa div para el mapa dinámico
       contenedorMapa = document.createElement("div");
       document.querySelector("main").appendChild(contenedorMapa);
     }
