@@ -12,6 +12,7 @@ main h2 {
   text-align: center;
 }
 
+/* Especificidad: 002 */
 main p {
   grid-column: 1 / -1;
   text-align: center;
@@ -25,7 +26,7 @@ main article {
 @media (max-width: 800px) {
   /* Especificidad: 001 */
   main {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(6, auto);
+    grid-template-columns: repeat(2, 1fr);  /*Se redefine por el cambio de resolucion (@media)*/
+    grid-template-rows: repeat(6, auto);    /*Se redefine por el cambio de resolucion (@media)*/
   }
 }
