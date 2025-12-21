@@ -29,4 +29,9 @@ main article {
     grid-template-columns: repeat(2, 1fr);  /*Se redefine por el cambio de resolucion (@media)*/
     grid-template-rows: repeat(6, auto);    /*Se redefine por el cambio de resolucion (@media)*/
   }
+
+  /* Especificidad: 002 */
+  main article {
+    height: 20vh;
+  }
 }

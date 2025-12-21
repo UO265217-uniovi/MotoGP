@@ -67,7 +67,8 @@
                 FROM pruebas_usabilidad p
                 JOIN usuarios u ON p.id_usuario = u.id_usuario
                 JOIN dispositivos d ON p.id_dispositivo = d.id_dispositivo
-                LEFT JOIN observaciones o ON p.id_prueba = o.id_prueba";
+                LEFT JOIN observaciones o ON p.id_prueba = o.id_prueba
+                ORDER BY p.id_prueba;";
 
         try {
             $resultado = $conn->query($sql);
