@@ -1,0 +1,126 @@
+"Tabla: dispositivos"
+id_dispositivo,nombre_dispositivo
+1,Ordenador
+2,Tableta
+3,"Teléfono Móvil"
+
+"Tabla: observaciones"
+id_observacion,id_prueba,comentario
+1,1,"El usuario ha respondido a todas las preguntas buscando la información sin mayor problema."
+2,2,"La usuaria no encontraba algunos lugares donde se encontraban las respuestas. Pese a estar en la página correcta"
+3,3,"El usuario no revisó algunas preguntas porque decidió ""jugarsela"" a ver si acertaba."
+4,4,"La usuaria cuando llegó la pregunta del juego de las cartas fue la única que se lo pasó entero y fue la única que entró al cronometro a ver como funcionaba."
+5,5,"""El usuario resolvió el juego de las parejas.
+No supo qué cronómetro era el que tenía que usar pero le dió al primero (siendo HTML)."""
+6,6,"El usuario no tuvo problemas para encontrar la información (salvo la pregunta de días de entrenamiento) que al parecer todos han tenido problemas en esa pregunta."
+7,7,"La usuaria hizo el test correctamente. 
+No terminó el juego de las parejas porque ya tenía toda la información. 
+La usuaria preguntó ""Por que hay un enlace que es una descarga""."
+
+"Tabla: preguntas"
+id,enunciado,respuesta_a,respuesta_b,respuesta_c,respuesta_d,correcta
+1,"¿Cuál es el dorsal con el que corre Somkiat Chantra en MotoGP 2025?",93,35,46,12,b
+2,"¿Cuántos días dura el calentamiento?",1,2,3,4,c
+3,"¿Qué archivo específico debes cargar en la sección ""Circuito"" para ver la altimetría?",mapa.svg,altimetria.xml,altimetria.svg,circuito.png,c
+4,"¿Qué marca de motos NO aparece en las cartas del Juego de Memoria?",Kawasaki,Ducati,KTM,Aprilia,a
+5,"¿Qué % de humedad había el día de la carrera a las 15 de la tarde?",33%,39%,58.46%,48%,a
+6,"¿Cuál es la altura del piloto Somkiat Chantra según su ficha técnica?","1,68m","1,75m","1,71m","1,80m",c
+7,"¿Cuántas noticias aparecen en la pantalla de inicio?",1,2,3,4,c
+8,"¿Qué archivo KML se solicita cargar para visualizar el mapa del circuito?",mapa.kml,track.kml,circuito.kml,motogp.kml,c
+9,"¿Cuántos clicks tienes que hacer desde la página de inicio para poner el cronómetro en marcha?",1,2,3,4,c
+10,"¿Qué término se define en la sección de Piloto como ""Vuelta de calentamiento""?","Pole Position","Warm Up Lap","Sighting Lap","Cooldown Lap",b
+
+"Tabla: pruebas_usabilidad"
+id_prueba,id_usuario,id_dispositivo,tiempo_total,completado,comentarios_usuario,propuestas_mejora,valoracion,puntuacion,fecha
+1,1,2,54.2673,1,"Las preguntas son muy fáciles. Es muy fácil saber dónde están las respuestas.","Poner preguntas más complicadas. 
+Destacar más algunos títulos (por ejemplo los titulos de las listas de descripción)",8,9,"2025-12-19 17:02:37"
+2,2,1,210.5706,1,"Me ha costado un poco encontrar algunas cosas porque hay muchas opciones. Los textos se leen bien.","Quizás hacer el menú más sencillo o con menos opciones para no liarse.",7,8,"2025-12-20 11:30:31"
+3,3,3,72.1289,1,"Sin comentarios",Ninguna,9,8,"2025-12-20 13:31:36"
+4,4,2,190.4891,1,"Muy divertido el juego de las parejas.","Hay muchas páginas que no se usan para el test.",9,10,"2025-12-20 13:43:49"
+5,5,1,137.8553,1,"Me ha gustado que sea sobre el mundo del motor, pero en la foto del inicio me sale un coche.","Sin propuestas",7,8,"2025-12-21 10:33:30"
+6,6,3,186.2352,1,"Está muy bien pero las noticias al principio no aparecían. El juego de las parejas se ve muy grande tenía que deslizar mucho.","Cambiar el tamaño de las tarjetas del juego.",9,8,"2025-12-21 10:45:54"
+7,7,2,187.9957,1,"La página está bien pero hay alguna pregunta que no se donde encontrar la respuesta como dias de entrenamiento. No me ha gustado que se me descargue un archivo","Avisar de cuándo se va a descargar un archivo al pulsar en un link",9,9,"2025-12-21 11:35:49"
+
+"Tabla: respuestas_usuario"
+id_detalle,id_prueba,id_pregunta,respuesta_escogida,es_correcta
+1,1,1,b,1
+2,1,2,c,1
+3,1,3,a,0
+4,1,4,a,1
+5,1,5,a,1
+6,1,6,c,1
+7,1,7,a,1
+8,1,8,c,1
+9,1,9,c,1
+10,1,10,b,1
+11,2,1,b,1
+12,2,2,c,1
+13,2,3,c,1
+14,2,4,b,0
+15,2,5,a,1
+16,2,6,c,1
+17,2,7,a,0
+18,2,8,c,1
+19,2,9,c,1
+20,2,10,b,1
+21,3,1,b,1
+22,3,2,c,1
+23,3,3,c,1
+24,3,4,a,1
+25,3,5,c,0
+26,3,6,a,0
+27,3,7,c,1
+28,3,8,c,1
+29,3,9,c,1
+30,3,10,b,1
+31,4,1,b,1
+32,4,2,c,1
+33,4,3,c,1
+34,4,4,a,1
+35,4,5,a,1
+36,4,6,c,1
+37,4,7,c,1
+38,4,8,c,1
+39,4,9,c,1
+40,4,10,b,1
+41,5,1,b,1
+42,5,2,c,1
+43,5,3,c,1
+44,5,4,a,1
+45,5,5,a,1
+46,5,6,a,0
+47,5,7,c,1
+48,5,8,c,1
+49,5,9,c,1
+50,5,10,d,0
+51,6,1,b,1
+52,6,2,c,1
+53,6,3,c,1
+54,6,4,a,1
+55,6,5,a,1
+56,6,6,b,0
+57,6,7,c,1
+58,6,8,a,0
+59,6,9,c,1
+60,6,10,b,1
+61,7,1,b,1
+62,7,2,c,1
+63,7,3,c,1
+64,7,4,a,1
+65,7,5,b,0
+66,7,6,c,1
+67,7,7,c,1
+68,7,8,c,1
+69,7,9,c,1
+70,7,10,b,1
+
+"Tabla: usuarios"
+id_usuario,profesion,edad,genero,pericia
+1,"Desarrollador de Software",25,Hombre,10
+2,Administrativa,42,Mujer,3
+3,Camarero,29,Hombre,7
+4,"Conductora de autobús",55,Mujer,3
+5,Repartidor,26,Hombre,4
+6,Azulejista,60,Hombre,3
+7,Fisioterapeuta,50,Mujer,2
+
