@@ -45,67 +45,61 @@
         }
 
         public function exportar() {
-            
-        try {
-            $this->db->seleccionarBD();
-        } catch (Exception $e) {
-            return "Error: La base de datos no existe. Inicialícela primero.";
-        }
-
-        $conn = $this->db->getConexion();
-        
-        if ($conn->connect_error) {
-            return "Error de conexión: " . $conn->connect_error;
-        }
-
-        $sql = "SELECT p.id_prueba, 
-                       u.profesion, u.edad, u.genero, u.pericia, 
-                       d.nombre_dispositivo, 
-                       p.tiempo_total, p.valoracion, p.puntuacion, p.completado, 
-                       p.comentarios_usuario, p.propuestas_mejora,
-                       o.comentario AS observacion_facilitador
-                FROM pruebas_usabilidad p
-                JOIN usuarios u ON p.id_usuario = u.id_usuario
-                JOIN dispositivos d ON p.id_dispositivo = d.id_dispositivo
-                LEFT JOIN observaciones o ON p.id_prueba = o.id_prueba
-                ORDER BY p.id_prueba;";
-
-        try {
-            $resultado = $conn->query($sql);
-        } catch (Exception $e) {
-             return "Error al consultar: " . $e->getMessage();
-        }
-
-        if ($resultado && $resultado->num_rows > 0) {
-            header('Content-Type: text/csv; charset=utf-8');
-            header('Content-Disposition: attachment; filename=informe_usabilidad.csv');
-
-            $output = fopen('php://output', 'w');
-            
-            fputcsv($output, array(
-                'ID Prueba', 
-                'Profesion', 
-                'Edad', 
-                'Genero', 
-                'Pericia', 
-                'Dispositivo', 
-                'Tiempo (s)', 
-                'Valoracion', 
-                'Puntuacion',     
-                'Completado', 
-                'Comentarios Usuario', 
-                'Propuestas Mejora',
-                'Observaciones Facilitador'
-            ));
-            
-            while ($fila = $resultado->fetch_assoc()) {
-                fputcsv($output, $fila);
+            try {
+                $this->db->seleccionarBD();
+            } catch (Exception $e) {
+                return "Error: La base de datos no existe. Inicialícela primero.";
             }
-            fclose($output);
-            exit();
-        } else {
-            return "No hay datos para exportar.";
+
+            $conn = $this->db->getConexion();
+            if ($conn->connect_error) {
+                return "Error de conexión: " . $conn->connect_error;
+            }
+
+            // Obtener todas las tablas
+            $tablasResult = $conn->query("SHOW TABLES");
+            if (!$tablasResult) {
+                return "Error al obtener tablas: " . $conn->error;
+            }
+
+            if ($tablasResult->num_rows > 0) {
+                header('Content-Type: text/csv; charset=utf-8');
+                header('Content-Disposition: attachment; filename=base_de_datos.csv');
+
+                $output = fopen('php://output', 'w');
+
+                while ($tablaRow = $tablasResult->fetch_array()) {
+                    $nombreTabla = $tablaRow[0];
+
+                    // Cabecera de la sección de la tabla
+                    fputcsv($output, array("Tabla: " . $nombreTabla));
+
+                    $datosResult = $conn->query("SELECT * FROM " . $nombreTabla);
+                    
+                    if ($datosResult) {
+                        // Obtener nombres de columnas
+                        $columnas = array();
+                        $fields = $datosResult->fetch_fields();
+                        foreach ($fields as $field) {
+                            $columnas[] = $field->name;
+                        }
+                        fputcsv($output, $columnas);
+
+                        // Escribir datos
+                        while ($fila = $datosResult->fetch_assoc()) {
+                            fputcsv($output, $fila);
+                        }
+                        
+                        // Separador entre tablas
+                        fputcsv($output, array("")); 
+                    }
+                }
+
+                fclose($output);
+                exit();
+            } else {
+                return "No hay tablas en la base de datos.";
+            }
         }
-    }
     }
 ?>
