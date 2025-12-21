@@ -77,7 +77,7 @@
                 <p>
                     <input type="submit" name="arrancar" value="Arrancar" />
                     <input type="submit" name="parar" value="Parar" />
-                    <input type="submit" name="mostrar" value="Mostrar / Actualizar" />
+                    <input type="submit" name="mostrar" value="Mostrar" />
                     <input type="submit" name="reiniciar" value="Reiniciar" />
                 </p>
             </form>

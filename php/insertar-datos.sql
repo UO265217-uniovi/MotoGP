@@ -13,7 +13,7 @@ INSERT INTO preguntas (enunciado, respuesta_a, respuesta_b, respuesta_c, respues
 ('¿Qué marca de motos NO aparece en las cartas del Juego de Memoria?', 'Kawasaki', 'Ducati', 'KTM', 'Aprilia', 'a'),
 ('Según la biografía, ¿en qué categoría compitió Somkiat Chantra antes de subir a Moto2?', 'Red Bull Rookies Cup', 'Asia Talent Team (Moto3)', 'MotoE', 'Superbikes', 'b'),
 ('¿Cuál es la altura del piloto Somkiat Chantra según su ficha técnica?', '1,68m', '1,75m', '1,71m', '1,80m', 'c'),
-('¿Quién figura como autor en los metadatos de las páginas del sitio web?', 'Marc Márquez', 'Dorna Sports', 'Iván Roque Álvarez Lamas', 'Somkiat Chantra', 'c'),
+('¿Cuántas noticias aparecen en la pantalla de inicio?', '1', '2', '3', '4', 'c'),
 ('¿Qué archivo KML se solicita cargar para visualizar el mapa del circuito?', 'mapa.kml', 'track.kml', 'circuito.kml', 'motogp.kml', 'c'),
 ('¿Con qué fabricante competirá Chantra en el Mundial de Superbikes en 2026?', 'Yamaha', 'Ducati', 'Kawasaki', 'Honda HRC', 'd'),
 ('¿Qué término se define en la sección de Piloto como "Vuelta de calentamiento"?', 'Pole Position', 'Warm Up Lap', 'Sighting Lap', 'Cooldown Lap', 'b');
