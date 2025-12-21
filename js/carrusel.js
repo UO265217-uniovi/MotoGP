@@ -1,13 +1,11 @@
 class Carrusel {
   #busqueda;
   #actual;
-  #maximo;
   #fotos;
 
   constructor(circuito) {
     this.#busqueda = circuito;
     this.#actual = 0;
-    this.#maximo = 4;
     this.#fotos = [];
   }
 
@@ -67,6 +65,6 @@ class Carrusel {
   }
 }
 document.addEventListener("DOMContentLoaded", function () {
-  let miCarrusel = new Carrusel("MotorLand Aragon");
+  let miCarrusel = new Carrusel("MotorLand Aragón");
   miCarrusel.getFotografias();
 });
