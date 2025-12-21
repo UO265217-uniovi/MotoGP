@@ -27,6 +27,65 @@ if ($paso == 'cuestionario') {
     $_SESSION['crono_test']->arrancar();
 }
 
+
+elseif ($paso == 'cancelar') {
+    // FASE: CANCELACIÓN
+    // El usuario abandona. Guardamos lo que tenemos y completado = 0
+    try {
+        $bd = new BaseDatos();
+        $conn = $bd->getConexion();
+        $bd->seleccionarBD();
+
+        // 1. Insertar Usuario
+        $sqlUser = "INSERT INTO usuarios (profesion, edad, genero, pericia) VALUES (?, ?, ?, ?)";
+        $stmt = $conn->prepare($sqlUser);
+        $d = $_SESSION['datos_usuario'];
+        $stmt->bind_param("sisi", $d['profesion'], $d['edad'], $d['genero'], $d['pericia']);
+        
+        if ($stmt->execute()) {
+            $idUsuario = $conn->insert_id;
+            $stmt->close();
+
+            // Tiempo transcurrido hasta ahora
+            $tiempo = 0;
+            if (isset($_SESSION['crono_test'])) {
+                $_SESSION['crono_test']->parar();
+                $tiempo = $_SESSION['crono_test']->getSeconds();
+                unset($_SESSION['crono_test']);
+            }
+
+            // 2. Insertar Prueba (INCOMPLETA)
+            $sqlPrueba = "INSERT INTO pruebas_usabilidad (id_usuario, id_dispositivo, tiempo_total, completado, comentarios_usuario, propuestas_mejora, valoracion, puntuacion) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+            $stmt2 = $conn->prepare($sqlPrueba);
+            
+            $completado = 0; 
+            $comentarios = "Cancelado por el usuario";
+            $propuestas = "";
+            $valoracion = 0; // O null si la columna lo permite, pero asumimos 0 por simplicidad
+            $puntuacion = 0;
+            $idDisp = $d['dispositivo'];
+            
+            $stmt2->bind_param("iidissii", $idUsuario, $idDisp, $tiempo, $completado, $comentarios, $propuestas, $valoracion, $puntuacion);
+            
+            if ($stmt2->execute()) {
+                $mensaje = "Prueba cancelada correctamente. Se ha guardado su participación parcial.";
+                $paso = 'exito';
+            } else {
+                $mensaje = "Error al guardar cancelación: " . $conn->error;
+                $paso = 'exito';
+            }
+            $stmt2->close();
+        } else {
+            $mensaje = "Error al guardar usuario (cancelación): " . $conn->error;
+            $paso = 'exito';
+        }
+        $bd->cerrar();
+    } catch (Exception $e) {
+        $mensaje = "Excepción al cancelar: " . $e->getMessage();
+        $paso = 'exito';
+    }
+}
+
 elseif ($paso == 'finalizar') {
     // FASE 2 -> 3: El usuario contestó. Calculamos nota y paramos tiempo.
     
@@ -280,7 +339,10 @@ elseif ($paso == 'guardar') {
             }
             ?>
 
-            <p><input type="submit" value="Terminar Prueba"></p>
+            <p>
+                <input type="submit" value="Terminar Prueba">
+                <button type="submit" name="paso" value="cancelar" formnovalidate>Cancelar / Abandonar</button>
+            </p>
         </form>
       </section>
       <?php } ?>
