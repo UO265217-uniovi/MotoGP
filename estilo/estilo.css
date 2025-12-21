@@ -25,6 +25,7 @@ header a {
   text-decoration: none;
 }
 
+/* ESPECIFICIDAD 012 */
 header a:hover {
   text-decoration: underline;
 }
@@ -43,6 +44,12 @@ h1 {
 /* ESPECIFICIDAD 001 */
 nav {
   color: #ffd700; /* WARNING: Hereda color de fondo de header */
+}
+
+/* ESPECIFICIDAD 001 */
+dt {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 /* Selector migas */
